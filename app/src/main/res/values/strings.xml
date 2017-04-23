@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Fresh Doggos</string>
+    <string name="upload">Post Doggo</string>
+    <string name="take_picture">Get Doggo</string>
+</resources>
