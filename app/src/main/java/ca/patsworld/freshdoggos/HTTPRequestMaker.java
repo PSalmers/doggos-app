@@ -43,7 +43,7 @@ class HTTPRequestMaker {
 
     @NonNull
     private static HttpURLConnection getHttpURLConnection() throws IOException {
-        URL url = new URL("http://10.0.2.2:3000/");
+        URL url = new URL("http://10.0.2.2:3001/doggo_door");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("POST");
         connection.setRequestProperty("Content-Type", "application/json");

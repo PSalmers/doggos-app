@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -23,6 +24,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
@@ -86,11 +88,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void uploadPic(View view) {
-        Log.d("doggos", "uploadPic started");
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("imageFile", this.fileToBytes(currentPhotoPath));
-            Log.d("doggos", "File read successfully");
+            jsonObject.put("imageFile", new JSONArray(this.fileToBytes(currentPhotoPath)));
         } catch (JSONException | IOException e) {
             e.printStackTrace();
         }
